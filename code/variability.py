@@ -485,6 +485,10 @@ def RunEstimate(update_func, num_points=31, median_flag=False):
 
         #PlotPosterior(suite)
 
+        #pmf_m = suite.Marginal(0)
+        #pmf_s = suite.Marginal(1)
+        #print('marginal mu', pmf_m.Mean(), pmf_m.Var())
+        #print('marginal sigma', pmf_s.Mean(), pmf_s.Var())
 
         # PlotMarginals(suite)
 
@@ -494,7 +498,7 @@ def RunEstimate(update_func, num_points=31, median_flag=False):
 def main():
     random.seed(17)
 
-    func = UpdateSuite5
+    func = UpdateSuite1
     median_flag = (func == UpdateSuite5)
     RunEstimate(func, median_flag=median_flag)
 
